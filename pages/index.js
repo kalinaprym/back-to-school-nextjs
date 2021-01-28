@@ -1,12 +1,13 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import HeadTitle from '../components/head-title/head=title'
+import HeadTitle from '../components/head-title/head-title'
 import Footer from '../components/footer/footer'
+import Navigation from '../components/navigation/navigation'
 
 export default function Home() {
     return (
         <div className='container'>
             <HeadTitle title='Back to school with Next.js' />
+            <Navigation />
             <main className='main'>
                 <h1 className='title'>
                     Back to school with{' '}
