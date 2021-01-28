@@ -29,9 +29,5 @@ export default function ProductList({ products }) {
 }
 
 export async function getStaticProps() {
-    return {
-        props: {
-            products: await getProducts(),
-        },
-    }
+    // code here
 }

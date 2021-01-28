@@ -30,18 +30,9 @@ export default function Product({ product }) {
 }
 
 export async function getStaticPaths() {
-    const products = await getProducts()
-    const paths = products.map(product => `/products-ssg/${product.id}`)
-    // const paths = [{ params: { id: '1' } }, { params: { id: '2' } }]
-
-    return { paths, fallback: false }
+    // code here
 }
 
 export async function getStaticProps({ params }) {
-    return {
-        props: {
-            product: await getSingleProduct(params.id),
-        },
-        // revalidate: 1
-    }
+    // code here
 }

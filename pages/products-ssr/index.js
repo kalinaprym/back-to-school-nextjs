@@ -27,9 +27,5 @@ export default function ProductList({ products }) {
 }
 
 export async function getServerSideProps() {
-    return {
-        props: {
-            products: await getProducts(),
-        },
-    }
+    // code here
 }
