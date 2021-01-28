@@ -20,17 +20,6 @@ export default function Product({ product }) {
     )
 }
 
-export async function getServerSideProps({ params }) {
-    const product = await getSingleProduct(params.id)
-
-    if (!product)
-        return {
-            notFound: true,
-        }
-
-    return {
-        props: {
-            product,
-        },
-    }
+export async function getServerSideProps() {
+    // code here
 }
