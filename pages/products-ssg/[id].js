@@ -31,7 +31,9 @@ export default function Product({ product }) {
 
 export async function getStaticPaths() {
     const products = await getProducts()
-    const paths = products.map(product => `/products-ssg/${product.id}`)
+    const paths = products.map(product => ({
+        params: { id: `${product.id}` },
+    }))
     // const paths = [{ params: { id: '1' } }, { params: { id: '2' } }]
 
     return { paths, fallback: false }
